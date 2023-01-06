@@ -1,0 +1,22 @@
+{
+  "env": {
+      "browser": true,
+      "es2021": true
+  },
+  "ignorePatterns": ["**/*.json"],
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+      "extends": ["plugin:@typescript-eslint/recommended"]
+    },
+    {
+      "files": ["**/__tests__/**/*", "**/*.{spec,test}.*"],
+      "plugins": ["mocha"],
+      "extends": ["plugin:@typescript-eslint/recommended", "plugin:mocha/recommended"],
+      "rules": {
+          "mocha/no-mocha-arrows": "off",
+          "mocha/no-setup-in-describe": "off"
+      }
+    }
+  ]
+}
